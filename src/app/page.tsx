@@ -1,3 +1,4 @@
+//import { Link } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
@@ -12,23 +13,41 @@ export default function Home() {
           height={38}
           priority
         />
+        <Image
+              className="dark:invert"
+              src="/ref arch.png"
+              alt="Ref Arch"
+              width={1000}
+              height={100}
+            />
         <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
+            This is a reference architecture that demostrates how to build a <b color="blue">planet scale, global architecture for modern cloud apps.</b>
           </li>
           <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
+            It&apos;s {" "}
+            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
+              100% serverless, hyper-elastic, & self healing
+            </code>
+          </li>
+          <li className="tracking-[-.01em]">
+            This is a React Application, built with Next JS. Compiled statically and exported as a Single page app (SPA)
+          </li>
+          <li className="tracking-[-.01em]">
+            It&apos;s deployed to a Google Cloud Bucket and served via Google Cloud CDN
+          </li>
+          <li className="tracking-[-.01em]">
+            Cloud Run powers the compute backend and interacts with Firestore to provide persistance
+          </li>
+          <li className="tracking-[-.01em]">
+            A Global External Load Balancer presents a single Anycast IP across the world
           </li>
         </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="/start"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -39,15 +58,15 @@ export default function Home() {
               width={20}
               height={20}
             />
-            Deploy now
+            Start
           </a>
           <a
             className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://medium.com/google-cloud/build-a-planet-scale-global-architecture-for-modern-apps-on-google-cloud-96561750cba4"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Read our docs
+            Read the blog
           </a>
         </div>
       </main>
